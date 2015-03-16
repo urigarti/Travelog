@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Database/Database.iml" filepath="$PROJECT_DIR$/Database/Database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Logger/Logger.iml" filepath="$PROJECT_DIR$/Logger/Logger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/main-application/UserDetails/UserDetails.iml" filepath="$PROJECT_DIR$/main-application/UserDetails/UserDetails.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Utils/Utils.iml" filepath="$PROJECT_DIR$/Utils/Utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/main-application/main-application.iml" filepath="$PROJECT_DIR$/main-application/main-application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/travelog.iml" filepath="$PROJECT_DIR$/travelog.iml" />
+    </modules>
+  </component>
+</project>
