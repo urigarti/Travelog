@@ -1,4 +1,4 @@
-package com.example.UserDetails;
+package com.travelog.mainapplication.userdetails;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -10,6 +10,6 @@ public class UserDetailsActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.masterscreen);
     }
 }

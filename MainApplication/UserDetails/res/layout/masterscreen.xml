@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:weightSum="1" android:clickable="false">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+                android:id="@+id/upperMenuBar"
+                android:layout_width="1184dp"
+                android:layout_height="60dp"
+                android:clickable="false"
+                android:scrollbars="none"
+                android:layout_gravity="top">
+
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/editText"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="203dp"
+                android:text="memoTrip"
+                android:inputType="text"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:enabled="true"
+                android:editable="false"
+                android:autoLink="none"
+                style="@android:style/TextAppearance.DeviceDefault.Widget.Button" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layoutDirection="rtl"
+            android:layout_alignParentRight="true"
+                android:id="@+id/rightMenuBar"
+                android:layout_width="93dp"
+                android:layout_height="726dp"
+                android:layout_gravity="right"
+            android:gravity="right">
+            <ImageButton
+                android:layout_alignParentRight="true"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/button1"
+                android:background="#ffc2ff52"
+                    android:layout_marginTop="45dp"
+                    android:layout_alignParentTop="true" android:layout_alignParentEnd="true"/>
+            <ImageButton android:layout_width="60dp"
+                android:layout_alignParentRight="true"
+                        android:id="@+id/button2"
+                         android:layout_height="60dp"
+                         android:background="#ffff4270"
+                         android:layout_below="@+id/button1"
+                            android:layout_alignParentEnd="true"/>
+            <ImageButton
+                android:id="@+id/button3"
+                android:layoutDirection="ltr"
+                android:layout_alignParentRight="true"
+                android:layout_width="60dp"
+                        android:layout_height="60dp"
+                         android:background="#ff5b3cff"
+                         android:layout_below="@+id/button2" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/appBackground"
+            android:layout_width="1165dp"
+            android:layout_height="604dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/upperMenuBar"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/rightMenuBar"></FrameLayout>
+    </RelativeLayout>
+</GridLayout>
+
