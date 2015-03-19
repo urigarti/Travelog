@@ -1,69 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              android:weightSum="1" android:clickable="false">
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="false"
+            android:weightSum="1">
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
         <RelativeLayout
-                android:id="@+id/upperMenuBar"
-                android:layout_width="1184dp"
-                android:layout_height="60dp"
-                android:clickable="false"
-                android:scrollbars="none"
-                android:layout_gravity="top">
+            android:id="@+id/upperMenuBar"
+            android:layout_width="1184dp"
+            android:layout_height="60dp"
+            android:layout_gravity="top"
+            android:clickable="false"
+            android:scrollbars="none">
 
             <EditText
+                android:id="@+id/editText"
+                style="@android:style/TextAppearance.DeviceDefault.Widget.Button"
                 android:layout_width="150dp"
                 android:layout_height="fill_parent"
-                android:id="@+id/editText"
-                android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
                 android:layout_marginStart="203dp"
-                android:text="memoTrip"
-                android:inputType="text"
-                android:textStyle="bold"
-                android:typeface="sans"
-                android:enabled="true"
-                android:editable="false"
                 android:autoLink="none"
-                style="@android:style/TextAppearance.DeviceDefault.Widget.Button" />
+                android:editable="false"
+                android:enabled="true"
+                android:inputType="text"
+                android:text="memoTrip"
+                android:textStyle="bold"
+                android:typeface="sans"/>
         </RelativeLayout>
 
         <RelativeLayout
-            android:layoutDirection="rtl"
+            android:id="@+id/rightMenuBar"
+            android:layout_width="93dp"
+            android:layout_height="726dp"
             android:layout_alignParentRight="true"
-                android:id="@+id/rightMenuBar"
-                android:layout_width="93dp"
-                android:layout_height="726dp"
-                android:layout_gravity="right"
-            android:gravity="right">
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:layoutDirection="rtl">
+
             <ImageButton
-                android:layout_alignParentRight="true"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:id="@+id/button1"
-                android:background="#ffc2ff52"
-                    android:layout_marginTop="45dp"
-                    android:layout_alignParentTop="true" android:layout_alignParentEnd="true"/>
-            <ImageButton android:layout_width="60dp"
-                android:layout_alignParentRight="true"
-                        android:id="@+id/button2"
-                         android:layout_height="60dp"
-                         android:background="#ffff4270"
-                         android:layout_below="@+id/button1"
-                            android:layout_alignParentEnd="true"/>
-            <ImageButton
-                android:id="@+id/button3"
-                android:layoutDirection="ltr"
-                android:layout_alignParentRight="true"
+                android:id="@+id/mainPanelHome"
                 android:layout_width="60dp"
-                        android:layout_height="60dp"
-                         android:background="#ff5b3cff"
-                         android:layout_below="@+id/button2" android:layout_alignParentEnd="true"/>
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="45dp"
+                android:background="#80808080"
+                android:scaleType="fitCenter"
+                android:src="@drawable/home_selected"/>
+
+            <ImageButton
+                android:id="@+id/mainPanelMap"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/mainPanelHome"
+                android:background="#80808080"
+                android:scaleType="fitCenter"
+                android:src="@drawable/map_not_selected"/>
+
+            <ImageButton
+                android:id="@+id/mainPanelUserDetails"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/mainPanelMap"
+                android:background="#80808080"
+                android:layoutDirection="ltr"
+                android:scaleType="fitCenter"
+                android:src="@drawable/user_profile_not_selected"/>
+
+            <ImageButton
+                android:id="@+id/mainPanelEditDiary"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/mainPanelUserDetails"
+                android:background="#80808080"
+                android:layoutDirection="ltr"
+                android:scaleType="fitCenter"
+                android:src="@drawable/editing_diary_not_selected"/>
+
+            <ImageButton
+                android:id="@+id/mainPanelSorting"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/mainPanelEditDiary"
+                android:background="#80808080"
+                android:layoutDirection="ltr"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sorting_not_selected"/>
+
+            <ImageButton
+                android:id="@+id/mainPanelAddToDiary"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/mainPanelSorting"
+                android:background="#80808080"
+                android:layoutDirection="ltr"
+                android:scaleType="fitCenter"
+                android:src="@drawable/add_to_diary_not_selected"/>
+
+            <ImageButton
+                android:id="@+id/mainPanelSelections"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/mainPanelAddToDiary"
+                android:background="#80808080"
+                android:layoutDirection="ltr"
+                android:scaleType="fitCenter"
+                android:src="@drawable/selection_not_selected"/>
+
+            <ImageButton
+                android:id="@+id/mainPanelSharing"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/mainPanelSelections"
+                android:background="#80808080"
+                android:layoutDirection="ltr"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sharing_not_selected"/>
+
+            <ImageButton
+                android:id="@+id/mainPanelDeletions"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/mainPanelSharing"
+                android:background="#80808080"
+                android:layoutDirection="ltr"
+                android:scaleType="fitCenter"
+                android:src="@drawable/delete_not_selected"/>
         </RelativeLayout>
 
         <FrameLayout
@@ -71,8 +156,8 @@
             android:layout_width="1165dp"
             android:layout_height="604dp"
             android:layout_alignParentBottom="true"
-            android:layout_below="@+id/upperMenuBar"
             android:layout_alignParentStart="true"
+            android:layout_below="@+id/upperMenuBar"
             android:layout_toStartOf="@+id/rightMenuBar"></FrameLayout>
     </RelativeLayout>
 </GridLayout>
