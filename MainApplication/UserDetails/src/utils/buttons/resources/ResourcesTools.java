@@ -1,7 +1,8 @@
 package utils.buttons.resources;
 
 import android.util.Log;
-import com.travelog.mainapplication.userdetails.R;
+import android.view.View;
+import utils.enums.ResourceType;
 
 import java.lang.reflect.Field;
 
@@ -10,15 +11,22 @@ import java.lang.reflect.Field;
  */
 public class ResourcesTools {
 
-    public static int getDrawableId(String drawableName) {
+    public static int getDrawableId(String drawableName, ResourceType resourceType) {
+        int id = -1;
         try {
-            Class res = R.drawable.class;
+            Class<? extends Object> res = resourceType.getType();
             Field field = res.getField(drawableName);
-            return field.getInt(null);
+            id =  field.getInt(null);
         }
         catch (Exception e) {
             Log.e("Travelog", "Failure to get drawable id.", e);
         }
-        return -1;
+        return id;
     }
+
+    public String getResourceName(View v, int resourceId) {
+        return v.getResources().getResourceEntryName(resourceId);
+    }
+
+//    public int getResourceId(String resourceName)
 }
