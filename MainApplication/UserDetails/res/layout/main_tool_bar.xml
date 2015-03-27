@@ -15,7 +15,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="45dp"
-        android:background="#80808080"
+        android:background="@drawable/main_shape"
         android:scaleType="fitCenter"
         android:src="@drawable/home_selected"/>
 
