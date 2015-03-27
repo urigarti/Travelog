@@ -21,6 +21,8 @@
 
         <include layout="@layout/main_tool_bar"/>
 
+
+
         <FrameLayout
             android:id="@+id/appBackground"
             android:layout_width="1165dp"
