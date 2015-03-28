@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.widget.*;
-import utils.buttons.MainOptionsSwitcher;
-import utils.enums.buttons.MainMenuButtons;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.travelog.utils.buttons.MainOptionsSwitcher;
+import com.travelog.utils.buttons.TravelogImageButton;
+import com.travelog.utils.enums.buttons.MainMenuButtons;
 
 public class UserDetailsActivity extends FragmentActivity {
 
@@ -26,9 +28,9 @@ public class UserDetailsActivity extends FragmentActivity {
 
 		activity = this;
 		
-		List<ImageButton> viewButtons = new ArrayList<ImageButton>();
+		List<TravelogImageButton> viewButtons = new ArrayList<TravelogImageButton>();
 		for (MainMenuButtons button : MainMenuButtons.values()) {
-			ImageButton bt = (ImageButton) findViewById(button.getId());
+			TravelogImageButton bt = (TravelogImageButton) findViewById(button.getId());
 			viewButtons.add(bt);
 		}
 
@@ -36,7 +38,7 @@ public class UserDetailsActivity extends FragmentActivity {
 		RelativeLayout l = (RelativeLayout) inflater.inflate(R.layout.main_tool_bar, null);
 		mainOptionsSwitcher = new MainOptionsSwitcher(l, viewButtons);
 
-		mainOptionsSwitcher.autoAdjustHeights();
+		mainOptionsSwitcher.autoAdjustHeights(l);
 	}
 	
 }

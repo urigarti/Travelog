@@ -1,4 +1,4 @@
-package utils.enums;
+package com.travelog.utils.enums;
 
 import com.travelog.mainapplication.userdetails.R;
 

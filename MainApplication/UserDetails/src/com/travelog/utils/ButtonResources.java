@@ -1,4 +1,4 @@
-package utils;
+package com.travelog.utils;
 
 /**
  * Created by yasminuri on 3/21/2015.

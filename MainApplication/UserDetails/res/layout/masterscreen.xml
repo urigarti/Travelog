@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:clickable="false"
-            android:weightSum="1">
-
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="false"
+    android:weightSum="1" >
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent" >
 
         <RelativeLayout
             android:id="@+id/upperMenuBar"
@@ -16,12 +15,10 @@
             android:layout_height="60dp"
             android:layout_gravity="top"
             android:clickable="false"
-            android:scrollbars="none">
+            android:scrollbars="none" >
         </RelativeLayout>
 
-        <include layout="@layout/main_tool_bar"/>
-
-
+        <include layout="@layout/main_tool_bar" />
 
         <FrameLayout
             android:id="@+id/appBackground"
@@ -30,7 +27,8 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/upperMenuBar"
-            android:layout_toStartOf="@+id/rightMenuBar"></FrameLayout>
+            android:layout_toStartOf="@+id/rightMenuBar" >
+        </FrameLayout>
     </RelativeLayout>
-</GridLayout>
 
+</GridLayout>

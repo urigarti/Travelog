@@ -1,4 +1,4 @@
-package utils.enums.buttons;
+package com.travelog.utils.enums.buttons;
 
 import com.travelog.mainapplication.userdetails.R;
 

@@ -1,10 +1,11 @@
-package utils.buttons.resources;
+package com.travelog.utils.buttons.resources;
 
 import android.util.Log;
 import android.view.View;
-import utils.enums.ResourceType;
 
 import java.lang.reflect.Field;
+
+import com.travelog.utils.enums.ResourceType;
 
 /**
  * Created by yasminuri on 3/21/2015.
@@ -24,9 +25,7 @@ public class ResourcesTools {
         return id;
     }
 
-    public String getResourceName(View v, int resourceId) {
-        return v.getResources().getResourceEntryName(resourceId);
+    public static String getResourceName(View parentView, int resourceId) {
+    	return parentView.getResources().getResourceEntryName(resourceId);
     }
-
-//    public int getResourceId(String resourceName)
 }
