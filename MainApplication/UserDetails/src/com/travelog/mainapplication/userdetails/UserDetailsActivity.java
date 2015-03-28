@@ -24,6 +24,8 @@ public class UserDetailsActivity extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.masterscreen);
 
+		activity = this;
+		
 		List<ImageButton> viewButtons = new ArrayList<ImageButton>();
 		for (MainMenuButtons button : MainMenuButtons.values()) {
 			ImageButton bt = (ImageButton) findViewById(button.getId());
