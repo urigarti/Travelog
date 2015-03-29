@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.*;
 
 import java.util.ArrayList;
@@ -17,7 +18,8 @@ public class UserDetailsActivity extends FragmentActivity {
 
 	MainOptionsSwitcher mainOptionsSwitcher;
 	public static Activity activity;
-
+	
+	
 	/**
 	 * Called when the activity is first created.
 	 */
@@ -25,6 +27,9 @@ public class UserDetailsActivity extends FragmentActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.masterscreen);
+		
+		
+
 
 		activity = this;
 		
@@ -37,8 +42,22 @@ public class UserDetailsActivity extends FragmentActivity {
 		LayoutInflater inflater = getLayoutInflater();
 		RelativeLayout l = (RelativeLayout) inflater.inflate(R.layout.main_tool_bar, null);
 		mainOptionsSwitcher = new MainOptionsSwitcher(l, viewButtons);
-
-		mainOptionsSwitcher.autoAdjustHeights(l);
+		
+		int i = getWindow().getDecorView().getHeight();
+		mainOptionsSwitcher.autoAdjustHeights(i);
+		
+		final View content = findViewById(android.R.id.content); 
+		content.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
+		    @Override
+		    public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
+		        // Make changes
+		    	mainOptionsSwitcher.autoAdjustHeights(top - bottom);
+		    }
+		});
 	}
+	
+	
+	
+	
 	
 }
