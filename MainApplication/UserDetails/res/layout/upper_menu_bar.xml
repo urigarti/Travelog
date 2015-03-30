@@ -1,0 +1,8 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:id="@+id/upper_menu_bar"
+            android:layout_width="1184dp"
+            android:layout_height="60dp"
+            android:layout_gravity="top"
+            android:clickable="false"
+            android:scrollbars="none" >
+</RelativeLayout>
