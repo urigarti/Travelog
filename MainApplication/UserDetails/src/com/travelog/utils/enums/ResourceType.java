@@ -1,6 +1,6 @@
 package com.travelog.utils.enums;
 
-import com.travelog.mainapplication.userdetails.R;
+import com.travelog.mainapplication.mainmenu.R;
 
 /**
  * Created by yasminuri on 3/27/2015.

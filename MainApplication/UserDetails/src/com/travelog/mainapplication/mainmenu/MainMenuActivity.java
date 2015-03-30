@@ -10,7 +10,6 @@ import android.widget.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.travelog.mainapplication.userdetails.R;
 import com.travelog.utils.buttons.MainOptionsSwitcher;
 import com.travelog.utils.buttons.TravelogImageButton;
 import com.travelog.utils.enums.buttons.MainMenuButtons;
@@ -19,8 +18,7 @@ public class MainMenuActivity extends FragmentActivity {
 
 	MainOptionsSwitcher mainOptionsSwitcher;
 	public static Activity activity;
-	
-	
+
 	/**
 	 * Called when the activity is first created.
 	 */
@@ -48,8 +46,9 @@ public class MainMenuActivity extends FragmentActivity {
 		content.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
 		    @Override
 		    public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
-		        // Make changes
-		    	mainOptionsSwitcher.autoAdjustHeights(top - bottom);
+				if(right != oldRight || left != oldLeft || top != oldTop || bottom != oldBottom) {
+					mainOptionsSwitcher.autoAdjustHeights(bottom - top);
+				}
 		    }
 		});
 	}

@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.travelog.mainapplication.userdetails.R;
+import com.travelog.mainapplication.mainmenu.R;
 
 /**
  * Created by yasminuri on 3/20/2015.

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.travelog.mainapplication.userdetails"
+          package="com.travelog.mainapplication.mainmenu"
           android:versionCode="1"
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="18"/>
     <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
-        <activity android:name="UserDetailsActivity"
+        <activity android:name="com.travelog.mainapplication.mainmenu.MainApplicationActivity"
                   android:label="@string/app_name"
                 android:screenOrientation="landscape">
             <intent-filter>
@@ -13,5 +13,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".MainMenuActivity"/>
+        <activity android:name=".UpperMenuActivity"/>
     </application>
 </manifest>
