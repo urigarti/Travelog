@@ -1,116 +1,135 @@
 <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/rightMenuBar"
+    android:id="@+id/main_menu_bat"
     android:layout_width="93dp"
-    android:layout_height="726dp"
+    android:layout_height="fill_parent"
     android:layout_alignParentRight="true"
     android:layout_gravity="right"
     android:gravity="right"
     android:layoutDirection="rtl">
 
-    <ImageButton
-        android:id="@+id/mainPanelHome"
+    <com.travelog.utils.buttons.TravelogImageButton
+        android:id="@+id/main_menu_home"
         android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="45dp"
-        android:background="@drawable/main_shape"
-        android:scaleType="fitCenter"
-        android:src="@drawable/home_selected"/>
+        android:background="#80808080"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/main_menu_home_selector"
+        android:tag="main_menu_home" />
 
-    <ImageButton
-        android:id="@+id/mainPanelMap"
+    <com.travelog.utils.buttons.TravelogImageButton
+        android:id="@+id/main_menu_map"
         android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/mainPanelHome"
+        android:layout_below="@+id/main_menu_home"
         android:background="#80808080"
-        android:scaleType="fitCenter"
-        android:src="@drawable/map_not_selected"/>
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/main_menu_map_selector"
+        android:tag="main_menu_map" />
 
-    <ImageButton
-        android:id="@+id/mainPanelUserDetails"
+    <com.travelog.utils.buttons.TravelogImageButton
+        android:id="@+id/main_menu_user_profile"
         android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/mainPanelMap"
+        android:layout_below="@+id/main_menu_map"
         android:background="#80808080"
+        android:clickable="true"
         android:layoutDirection="ltr"
-        android:scaleType="fitCenter"
-        android:src="@drawable/user_profile_not_selected"/>
+        android:scaleType="fitXY"
+        android:src="@drawable/main_menu_user_profile_selector"
+        android:tag="main_menu_user_profile" />
 
-    <ImageButton
-        android:id="@+id/mainPanelEditDiary"
+    <com.travelog.utils.buttons.TravelogImageButton
+        android:id="@+id/main_menu_edit_diary"
         android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/mainPanelUserDetails"
+        android:layout_below="@+id/main_menu_user_profile"
         android:background="#80808080"
+        android:clickable="true"
         android:layoutDirection="ltr"
-        android:scaleType="fitCenter"
-        android:src="@drawable/editing_diary_not_selected"/>
+        android:scaleType="fitXY"
+        android:src="@drawable/main_menu_edit_diary_selector"
+        android:tag="main_menu_edit_diary" />
 
-    <ImageButton
-        android:id="@+id/mainPanelSorting"
+    <com.travelog.utils.buttons.TravelogImageButton
+        android:id="@+id/main_menu_sort"
         android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/mainPanelEditDiary"
+        android:layout_below="@+id/main_menu_edit_diary"
         android:background="#80808080"
+        android:clickable="true"
         android:layoutDirection="ltr"
-        android:scaleType="fitCenter"
-        android:src="@drawable/sorting_not_selected"/>
+        android:scaleType="fitXY"
+        android:src="@drawable/main_menu_sort_selector"
+        android:tag="main_menu_sort" />
 
-    <ImageButton
-        android:id="@+id/mainPanelAddToDiary"
+    <com.travelog.utils.buttons.TravelogImageButton
+        android:id="@+id/main_menu_add_to_diary"
         android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/mainPanelSorting"
+        android:layout_below="@+id/main_menu_sort"
         android:background="#80808080"
+        android:clickable="true"
         android:layoutDirection="ltr"
-        android:scaleType="fitCenter"
-        android:src="@drawable/add_to_diary_not_selected"/>
+        android:scaleType="fitXY"
+        android:src="@drawable/main_menu_add_to_diary_selector"
+        android:tag="main_menu_add_to_diary" />
 
-    <ImageButton
-        android:id="@+id/mainPanelSelections"
+    <com.travelog.utils.buttons.TravelogImageButton
+        android:id="@+id/main_menu_selection"
         android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/mainPanelAddToDiary"
+        android:layout_below="@+id/main_menu_add_to_diary"
         android:background="#80808080"
+        android:clickable="true"
         android:layoutDirection="ltr"
-        android:scaleType="fitCenter"
-        android:src="@drawable/selection_not_selected"/>
+        android:scaleType="fitXY"
+        android:src="@drawable/main_menu_selection_selector"
+        android:tag="main_menu_selection" />
 
-    <ImageButton
-        android:id="@+id/mainPanelSharing"
+    <com.travelog.utils.buttons.TravelogImageButton
+        android:id="@+id/main_menu_share"
         android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/mainPanelSelections"
+        android:layout_below="@+id/main_menu_selection"
         android:background="#80808080"
+        android:clickable="true"
         android:layoutDirection="ltr"
-        android:scaleType="fitCenter"
-        android:src="@drawable/sharing_not_selected"/>
+        android:scaleType="fitXY"
+        android:src="@drawable/main_menu_share_selector"
+        android:tag="main_menu_share" />
 
-    <ImageButton
-        android:id="@+id/mainPanelDeletions"
+    <com.travelog.utils.buttons.TravelogImageButton
+        android:id="@+id/main_menu_delete"
         android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/mainPanelSharing"
+        android:layout_below="@+id/main_menu_share"
         android:background="#80808080"
+        android:clickable="true"
         android:layoutDirection="ltr"
-        android:scaleType="fitCenter"
-        android:src="@drawable/delete_not_selected"/>
+        android:scaleType="fitXY"
+        android:src="@drawable/main_menu_delete_selector"
+        android:tag="main_menu_delete" />
+
 </RelativeLayout>

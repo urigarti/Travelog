@@ -1,36 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:clickable="false"
-            android:weightSum="1">
-
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="false"
+    android:weightSum="1" >
 
     <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="left" >
 
+        <!--
         <RelativeLayout
-            android:id="@+id/upperMenuBar"
+            android:id="@+id/upper_menu_bar"
             android:layout_width="1184dp"
             android:layout_height="60dp"
             android:layout_gravity="top"
             android:clickable="false"
-            android:scrollbars="none">
+            android:scrollbars="none" >
         </RelativeLayout>
+        -->
 
-        <include layout="@layout/main_tool_bar"/>
+        <include
+            android:id="@+id/upper_menu_bar"
+            layout="@layout/upper_menu_bar" />
 
+        <include
+            android:id="@+id/main_tool_bar"
+            layout="@layout/main_tool_bar" />
 
-
-        <FrameLayout
+        <RelativeLayout
             android:id="@+id/appBackground"
             android:layout_width="1165dp"
-            android:layout_height="604dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/upperMenuBar"
-            android:layout_toStartOf="@+id/rightMenuBar"></FrameLayout>
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/upper_menu_bar"
+            android:layout_toLeftOf="@+id/main_tool_bar" >
+        </RelativeLayout>
     </RelativeLayout>
-</GridLayout>
 
+</GridLayout>
