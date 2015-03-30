@@ -8,8 +8,8 @@ import android.view.View.MeasureSpec;
 import android.view.ViewGroup;
 import android.widget.*;
 
+import com.travelog.mainapplication.mainmenu.MainMenuActivity;
 import com.travelog.mainapplication.userdetails.R;
-import com.travelog.mainapplication.userdetails.UserDetailsActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +39,7 @@ public class MainOptionsSwitcher {
 //			mainButtons.add(tb);
 			this.mainButtons.add((TravelogImageButton)buttons.get(i));
 		}
+//		autoAdjustHeights(parentLayout.getHeight());
 	}
 
 //    public void switchToOption(RelativeLayout parentLayout, String optionName) {
@@ -50,11 +51,11 @@ public class MainOptionsSwitcher {
 //
 //    }
 
-    public void autoAdjustHeights(RelativeLayout l) {
+    public void autoAdjustHeights(int buttonHeight) {
         Point displaySize = new Point();
-        UserDetailsActivity.activity.getWindowManager().getDefaultDisplay().getSize(displaySize);
-        int buttonHeight = displaySize.x / mainButtons.size();
-//    	RelativeLayout l = (RelativeLayout) LayoutInflater.inflate(R.layout.main_tool_bar, null);
+        MainMenuActivity.activity.getWindowManager().getDefaultDisplay().getSize(displaySize);
+//        int buttonHeight = displaySize.x / mainButtons.size();
+//    	LayoutInflater.inflate(R.layout.main_tool_bar, null);
 //    	parentView.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED);
 //    	int widht = parentView.getMeasuredWidth();
 //    	int height = parentView.getMeasuredHeight();
@@ -67,12 +68,14 @@ public class MainOptionsSwitcher {
         }
     }
 
-    public void switchImages(View v) {
-    	if(v instanceof TravelogImageButton) {
-    		((TravelogImageButton) v).select();
-    		selectedOption.deselect();
-    	}
-    }
+	public void switchImages(View v) {
+		if (v instanceof TravelogImageButton) {
+			if (!(v.getTag().equals(selectedOption.getTag()))) {
+				((TravelogImageButton) v).select();
+				selectedOption.deselect();
+			}
+		}
+	}
 
     View.OnClickListener groupClickListener = new View.OnClickListener() {
         public void onClick(View v) {
