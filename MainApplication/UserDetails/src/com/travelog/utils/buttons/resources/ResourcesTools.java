@@ -28,4 +28,10 @@ public class ResourcesTools {
     public static String getResourceName(View parentView, int resourceId) {
     	return parentView.getResources().getResourceEntryName(resourceId);
     }
+
+//    private String getStringResourceByName(String aString) {
+//        String packageName = getPackageName();
+//        int resId = getResources().getIdentifier(aString, "string", packageName);
+//        return getString(resId);
+//    }
 }

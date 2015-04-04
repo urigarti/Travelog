@@ -1,6 +1,5 @@
 package com.travelog.mainapplication.mainmenu;
 
-import com.travelog.mainapplication.userdetails.R;
 
 import android.app.Activity;
 import android.os.Bundle;
