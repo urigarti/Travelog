@@ -1,43 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
+            xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:clickable="false"
     android:weightSum="1" >
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:layout_gravity="left" >
-
-        <!--
-        <RelativeLayout
-            android:id="@+id/upper_menu_bar"
-            android:layout_width="1184dp"
-            android:layout_height="60dp"
-            android:layout_gravity="top"
-            android:clickable="false"
-            android:scrollbars="none" >
-        </RelativeLayout>
-        -->
-
-        <include
-            android:id="@+id/upper_menu_bar"
-            layout="@layout/upper_menu_bar" />
-
-        <include
-            android:id="@+id/main_tool_bar"
-            layout="@layout/main_tool_bar" />
-
-        <RelativeLayout
-            android:id="@+id/appBackground"
-            android:layout_width="1165dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/upper_menu_bar"
-            android:layout_toLeftOf="@+id/main_tool_bar" >
-        </RelativeLayout>
-    </RelativeLayout>
+    <FrameLayout
+            android:id="@+id/master_screen_container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_row="3"
+            android:layout_column="2">
+        <fragment android:layout_width="45dp"
+                  android:layout_height="match_parent"
+                  android:name="com.travelog.mainapplication.mainmenu.fragments.MainMenuFragment"
+                  android:id="@+id/main_menu_fragment"
+                  android:layout_gravity="right|center_vertical" tools:layout="@layout/main_tool_bar"/>
+        <fragment android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:name="com.travelog.mainapplication.mainmenu.fragments.UpperMenuFragment"
+                  android:id="@+id/upper_menu_fragment"
+                  android:layout_gravity="left|top" tools:layout="@layout/upper_menu_bar"/>
+        <fragment android:layout_width="340dp"
+                  android:layout_height="470dp"
+                  android:name="com.travelog.mainapplication.mainmenu.fragments.DiaryOperationsFragment"
+                  android:id="@+id/center_fragment"
+                  android:layout_gravity="left|bottom"
+                  tools:layout="@layout/diary_operations"/>
+    </FrameLayout>
+<!--</RelativeLayout>-->
 
 </GridLayout>

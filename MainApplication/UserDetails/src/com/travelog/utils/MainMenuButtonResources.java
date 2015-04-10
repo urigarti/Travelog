@@ -3,7 +3,7 @@ package com.travelog.utils;
 /**
  * Created by yasminuri on 3/21/2015.
  */
-public enum ButtonResources {
+public enum MainMenuButtonResources {
 
     Home("home"),
     Map("map"),
@@ -16,7 +16,7 @@ public enum ButtonResources {
 
     String buttonPrefix;
 
-    private ButtonResources(String buttonPrefix) {
+    private MainMenuButtonResources(String buttonPrefix) {
         this.buttonPrefix = buttonPrefix;
     }
 

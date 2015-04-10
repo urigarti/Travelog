@@ -2,7 +2,6 @@ package com.travelog.utils.buttons;
 
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,24 +11,17 @@ import java.util.List;
  */
 public class MainOptionsSwitcher {
 
-	View parentView;
+//	View parentView;
 	TravelogImageButton selectedOption;
     List<TravelogImageButton> mainButtons = new ArrayList<TravelogImageButton>();
     
     protected MainOptionsSwitcher() {}
 
-	public MainOptionsSwitcher(RelativeLayout parentLayout, List<TravelogImageButton> buttons) {
-		this.parentView = parentLayout;
+	public MainOptionsSwitcher(List<TravelogImageButton> buttons) {
 		selectedOption = buttons.get(0);
 		selectedOption.select();
-//		for(int childIdx = 0; childIdx < parentLayout.getChildCount(); childIdx++) {
-//			TravelogImageButton currentView = (TravelogImageButton)parentLayout.getChildAt(childIdx); 
 		for (int i = 0; i < buttons.size(); i++) {
 			buttons.get(i).setOnClickListener(groupClickListener);
-//			currentView.setOnClickListener(groupClickListener);
-//			TravelogImageButton tb = new TravelogImageButton(buttons.get(i).getContext());
-//			tb.setTag(buttons.get(i).getTag());
-//			mainButtons.add(tb);
 			this.mainButtons.add((TravelogImageButton)buttons.get(i));
 		}
 	}
