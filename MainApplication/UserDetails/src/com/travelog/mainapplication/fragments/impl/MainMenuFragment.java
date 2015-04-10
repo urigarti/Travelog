@@ -1,4 +1,4 @@
-package com.travelog.mainapplication.fragments;
+package com.travelog.mainapplication.fragments.impl;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,7 +13,7 @@ import com.travelog.utils.buttons.MainOptionsSwitcher;
 import com.travelog.utils.buttons.TravelogImageButton;
 import com.travelog.utils.enums.buttons.MainMenuButtons;
 
-public class MainMenuFragment extends android.support.v4.app.Fragment {
+public class MainMenuFragment extends TravelogFragmentBase {
 
 	MainOptionsSwitcher mainOptionsSwitcher;
 
