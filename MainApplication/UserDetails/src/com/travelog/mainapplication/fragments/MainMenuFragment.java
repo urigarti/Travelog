@@ -1,4 +1,4 @@
-package com.travelog.mainapplication.mainmenu.fragments;
+package com.travelog.mainapplication.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

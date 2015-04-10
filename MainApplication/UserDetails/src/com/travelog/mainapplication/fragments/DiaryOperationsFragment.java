@@ -1,4 +1,4 @@
-package com.travelog.mainapplication.mainmenu.fragments;
+package com.travelog.mainapplication.fragments;
 
 import com.travelog.mainapplication.mainmenu.R;
 

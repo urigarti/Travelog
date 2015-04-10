@@ -1,8 +1,11 @@
-package com.travelog.mainapplication.mainmenu;
+package com.travelog.mainapplication.activities;
 
-import com.travelog.mainapplication.mainmenu.fragments.DiaryOperationsFragment;
-import com.travelog.mainapplication.mainmenu.fragments.MainMenuFragment;
-import com.travelog.mainapplication.mainmenu.fragments.UpperMenuFragment;
+import com.travelog.mainapplication.fragments.DiaryOperationsFragment;
+import com.travelog.mainapplication.fragments.MainMenuFragment;
+import com.travelog.mainapplication.fragments.UpperMenuFragment;
+import com.travelog.mainapplication.mainmenu.R;
+import com.travelog.mainapplication.mainmenu.R.id;
+import com.travelog.mainapplication.mainmenu.R.layout;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
