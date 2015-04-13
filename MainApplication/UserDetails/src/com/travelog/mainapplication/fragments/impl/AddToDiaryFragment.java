@@ -1,19 +1,17 @@
 package com.travelog.mainapplication.fragments.impl;
 
-import com.travelog.mainapplication.mainmenu.R;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import com.travelog.mainapplication.mainmenu.R;
 
 /**
- * Created by Administrator on 04/04/2015.
+ * Created by Administrator on 11/04/2015.
  */
-public class DiaryOperationsFragment extends TravelogFragmentBase {
-
+public class AddToDiaryFragment extends TravelogFragmentBase {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.diary_operations_fragment, container, false);
+        return inflater.inflate(R.layout.add_to_diary_fragment, container, false);
     }
 }

@@ -17,14 +17,14 @@ public class OptionMenuComponent extends LinearLayout {
     public OptionMenuComponent(Context context) {
         super(context);
         LayoutInflater mInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mInflater.inflate(R.layout.option_menu_component_view, this, true);
+        mInflater.inflate(R.layout.option_menu_component_view_fragment, this, true);
     }
 
 
     public OptionMenuComponent(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         LayoutInflater mInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mInflater.inflate(R.layout.option_menu_component_view, this, true);
+        mInflater.inflate(R.layout.option_menu_component_view_fragment, this, true);
         if(isInEditMode()) {
             return;
         }

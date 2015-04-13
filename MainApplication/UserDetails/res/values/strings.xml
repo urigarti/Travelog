@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">UserDetails</string>
+    <string name="fragment_main_menu"/>
+    <string name="fragment_upper_menu"/>
+    <string name="fragment_center_pane"/>
 
     <style name="mainPanelSeparator">
     </style>

@@ -16,7 +16,7 @@ public enum MainMenuButtonResources {
 
     String buttonPrefix;
 
-    private MainMenuButtonResources(String buttonPrefix) {
+    MainMenuButtonResources(String buttonPrefix) {
         this.buttonPrefix = buttonPrefix;
     }
 

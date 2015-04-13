@@ -15,18 +15,20 @@
                   android:layout_height="match_parent"
                   android:name="com.travelog.mainapplication.fragments.impl.MainMenuFragment"
                   android:id="@+id/main_menu_fragment"
-                  android:layout_gravity="right|center_vertical" tools:layout="@layout/main_tool_bar"/>
+                  android:layout_gravity="right|center_vertical"
+                  tools:layout="@layout/main_tool_bar_fragment"/>
         <fragment android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:name="com.travelog.mainapplication.fragments.impl.UpperMenuFragment"
                   android:id="@+id/upper_menu_fragment"
-                  android:layout_gravity="left|top" tools:layout="@layout/upper_menu_bar"/>
+                  android:layout_gravity="left|top"
+                  tools:layout="@layout/upper_menu_bar_fragment"/>
         <fragment android:layout_width="340dp"
                   android:layout_height="470dp"
                   android:name="com.travelog.mainapplication.fragments.impl.DiaryOperationsFragment"
                   android:id="@+id/center_fragment"
                   android:layout_gravity="left|bottom"
-                  tools:layout="@layout/diary_operations"/>
+                  tools:layout="@layout/diary_operations_fragment"/>
     </FrameLayout>
 <!--</RelativeLayout>-->
 

@@ -11,7 +11,7 @@ public class UpperMenuFragment extends TravelogFragmentBase {
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		return inflater.inflate(R.layout.upper_menu_bar, container, false);
+		return inflater.inflate(R.layout.upper_menu_bar_fragment, container, false);
 
 	}
 

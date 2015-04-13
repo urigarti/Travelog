@@ -20,7 +20,7 @@
         android:clickable="true"
         android:scaleType="fitXY"
         android:src="@drawable/main_menu_home_selector"
-        android:tag="main_menu_home" />
+        android:tag="mainMenuHome" />
 
     <com.travelog.utils.buttons.TravelogImageButton
         android:id="@+id/main_menu_map"
@@ -33,7 +33,7 @@
         android:clickable="true"
         android:scaleType="fitXY"
         android:src="@drawable/main_menu_map_selector"
-        android:tag="main_menu_map" />
+        android:tag="mainMenuMap" />
 
     <com.travelog.utils.buttons.TravelogImageButton
         android:id="@+id/main_menu_user_profile"
@@ -47,7 +47,7 @@
         android:layoutDirection="ltr"
         android:scaleType="fitXY"
         android:src="@drawable/main_menu_user_profile_selector"
-        android:tag="main_menu_user_profile" />
+        android:tag="mainMenuUserDetails" />
 
     <com.travelog.utils.buttons.TravelogImageButton
         android:id="@+id/main_menu_edit_diary"
@@ -61,7 +61,7 @@
         android:layoutDirection="ltr"
         android:scaleType="fitXY"
         android:src="@drawable/main_menu_edit_diary_selector"
-        android:tag="main_menu_edit_diary" />
+        android:tag="mainMenuEditDiary" />
 
     <com.travelog.utils.buttons.TravelogImageButton
         android:id="@+id/main_menu_sort"
@@ -75,7 +75,7 @@
         android:layoutDirection="ltr"
         android:scaleType="fitXY"
         android:src="@drawable/main_menu_sort_selector"
-        android:tag="main_menu_sort" />
+        android:tag="mainMenuSorting" />
 
     <com.travelog.utils.buttons.TravelogImageButton
         android:id="@+id/main_menu_add_to_diary"
@@ -89,7 +89,7 @@
         android:layoutDirection="ltr"
         android:scaleType="fitXY"
         android:src="@drawable/main_menu_add_to_diary_selector"
-        android:tag="main_menu_add_to_diary" />
+        android:tag="mainMenuAddToDiary" />
 
     <com.travelog.utils.buttons.TravelogImageButton
         android:id="@+id/main_menu_selection"
@@ -103,7 +103,7 @@
         android:layoutDirection="ltr"
         android:scaleType="fitXY"
         android:src="@drawable/main_menu_selection_selector"
-        android:tag="main_menu_selection" />
+        android:tag="mainMenuSelections" />
 
     <com.travelog.utils.buttons.TravelogImageButton
         android:id="@+id/main_menu_share"
@@ -117,7 +117,7 @@
         android:layoutDirection="ltr"
         android:scaleType="fitXY"
         android:src="@drawable/main_menu_share_selector"
-        android:tag="main_menu_share" />
+        android:tag="mainMenuSharing" />
 
     <com.travelog.utils.buttons.TravelogImageButton
         android:id="@+id/main_menu_delete"
@@ -131,5 +131,5 @@
         android:layoutDirection="ltr"
         android:scaleType="fitXY"
         android:src="@drawable/main_menu_delete_selector"
-        android:tag="main_menu_delete" />
+        android:tag="mainMenuDeletions" />
 </RelativeLayout>
