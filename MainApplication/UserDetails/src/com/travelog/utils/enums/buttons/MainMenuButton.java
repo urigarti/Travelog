@@ -11,7 +11,7 @@ public enum MainMenuButton {
 
     mainMenuHome(R.id.main_menu_home, R.layout.home_fragment, new HomeFragment()),
     mainMenuMap(R.id.main_menu_map, R.layout.map_fragment, new MapFragment()),
-    mainMenuUserDetails(R.id.main_menu_user_profile, R.layout.user_details_fragment, new UserDetailsFragment()),
+    mainMenuUserDetails(R.id.main_menu_user_details, R.layout.user_details_fragment, new UserDetailsFragment()),
     mainMenuEditDiary(R.id.main_menu_edit_diary, R.layout.edit_diary_fragment, new EditDiaryFragment()),
     mainMenuSorting(R.id.main_menu_sort, R.layout.sorting_fragment, new SortingFragment()),
     mainMenuAddToDiary(R.id.main_menu_add_to_diary, R.layout.add_to_diary_fragment, new AddToDiaryFragment()),
