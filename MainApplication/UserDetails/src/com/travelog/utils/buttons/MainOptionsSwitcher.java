@@ -1,5 +1,6 @@
 package com.travelog.utils.buttons;
 
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import com.travelog.utils.events.mainmenuoperations.MainMenuOperationsEvent;
@@ -14,7 +15,6 @@ import java.util.List;
  */
 public class MainOptionsSwitcher {
 
-//	View parentView;
 	TravelogImageButton selectedOption;
     List<TravelogImageButton> mainButtons = new ArrayList<TravelogImageButton>();
 
@@ -23,12 +23,12 @@ public class MainOptionsSwitcher {
     protected MainOptionsSwitcher() {}
 
 	public MainOptionsSwitcher(List<TravelogImageButton> buttons) {
-		selectedOption = buttons.get(0);
-		selectedOption.select();
 		for (int i = 0; i < buttons.size(); i++) {
 			buttons.get(i).setOnClickListener(groupClickListener);
 			this.mainButtons.add((TravelogImageButton)buttons.get(i));
 		}
+		selectedOption = buttons.get(0);
+		switchImages(buttons.get(0));
 
 	}
 
@@ -42,10 +42,12 @@ public class MainOptionsSwitcher {
     }
 
 	public void switchImages(View v) {
+		Log.v("switchImages", "current button: " + selectedOption.getTag() + "/ New button: " + v.getTag());
 		if (v instanceof TravelogImageButton) {
-			if (!(v.getTag().equals(selectedOption.getTag()))) {
 				((TravelogImageButton) v).select();
+			if (!(v.getTag().equals(selectedOption.getTag()))) {
 				selectedOption.deselect();
+				selectedOption = (TravelogImageButton)v;
 			}
 		}
 	}
@@ -53,7 +55,6 @@ public class MainOptionsSwitcher {
     View.OnClickListener groupClickListener = new View.OnClickListener() {
         public void onClick(View v) {
             switchImages(v);
-            selectedOption = (TravelogImageButton)v;
 //			Fire an event to notify the containing fragment about the click
 			mainMenuChanged(((TravelogImageButton) v).getTag().toString());
         }
