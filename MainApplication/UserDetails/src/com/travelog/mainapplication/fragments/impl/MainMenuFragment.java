@@ -35,29 +35,28 @@ public class MainMenuFragment extends TravelogFragmentBase {
 	public void onViewCreated(View view, Bundle savedInstanceState) {
 		super.onViewCreated(view, savedInstanceState);
 
+		List<TravelogImageButton> viewButtons = new ArrayList<TravelogImageButton>();
+		for (MainMenuButton button : MainMenuButton.values()) {
+			TravelogImageButton bt = (TravelogImageButton) getView().findViewById(button.getButtonId());
+			viewButtons.add(bt);
+		}
+		mainOptionsSwitcher = new MainOptionsSwitcher(viewButtons);
+		mainOptionsSwitcher.addMainOptionChangedListener(new MainMenuOperationsListener() {
+			@Override
+			public void mainMenuOperationClicked(String buttonId) {
+				appModeChanged(buttonId);
+			}
+		});
+
 		getView().addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
 			@Override
 			public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
-				List<TravelogImageButton> viewButtons = new ArrayList<TravelogImageButton>();
-				for (MainMenuButton button : MainMenuButton.values()) {
-					TravelogImageButton bt = (TravelogImageButton) getView().findViewById(button.getButtonId());
-					viewButtons.add(bt);
-				}
-				mainOptionsSwitcher = new MainOptionsSwitcher(viewButtons);
-				mainOptionsSwitcher.addMainOptionChangedListener(new MainMenuOperationsListener() {
-					@Override
-					public void mainMenuOperationClicked(String buttonId) {
-						appModeChanged(buttonId);
-					}
-				});
-
 				if (right != oldRight || left != oldLeft || top != oldTop || bottom != oldBottom) {
 					mainOptionsSwitcher.autoAdjustHeights(bottom - top);
 				}
 			}
 		});
 	}
-	
 
 	public synchronized void appModeChanged(String buttonTag) {
 		fireModeEvent(Enum.valueOf(MainMenuButton.class, buttonTag));
